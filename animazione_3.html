@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<style>
+
+.viola {
+  background-color: #66004b;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 25%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+
+<script src="jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<button>Start Animation</button>
+<div id="oggetto" class="viola"></div>
+
+<script>
+
+$(document).ready(function(){
+  $("button").click(function(){
+    var div = $("div");
+    div.animate({borderRadius: '50%', left: '75%', opacity: '0.5'}, 2000);
+    div.animate({borderRadius: '0%', top: '75%', opacity: '1.0'}, 2000);
+    div.animate({borderRadius: '50%', left: '25%', opacity: '0.5'}, 2000);
+    div.animate({borderRadius: '0%', top: '25%', opacity: '1.0'}, 2000);
+  });
+});
+
+</script>
+
+</body>
+
+</html>
